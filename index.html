@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ========================================
+       META TAGS & SEO
+       ======================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>West End City Church - Connect With Us</title>
+  
+  <meta name="description" content="Connect with West End City Church on YouTube, Instagram, TikTok, and X. Join us for Sunday services at 6:30 AM and 8:30 AM.">
+  <meta name="keywords" content="West End City Church, church, worship, Sunday service, Ghana church">
+  <meta name="author" content="West End City Church">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="West End City Church - Connect With Us">
+  <meta property="og:description" content="Connect with West End City Church on social media. Join us for Sunday services!">
+  <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSRyGNPyYO-ajtB-bAAcnb_DmLSYAMoC0OfA&s">
+  <meta property="og:url" content="https://[YOUR-GITHUB-USERNAME].github.io/[REPO-NAME]/">
+  <meta property="og:site_name" content="West End City Church">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="West End City Church - Connect With Us">
+  <meta name="twitter:description" content="Connect with West End City Church on social media. Join us for Sunday services!">
+  <meta name="twitter:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSRyGNPyYO-ajtB-bAAcnb_DmLSYAMoC0OfA&s">
+  <meta name="twitter:site" content="@westend_city">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSRyGNPyYO-ajtB-bAAcnb_DmLSYAMoC0OfA&s">
+  <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSRyGNPyYO-ajtB-bAAcnb_DmLSYAMoC0OfA&s">
+  <link rel="apple-touch-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSRyGNPyYO-ajtB-bAAcnb_DmLSYAMoC0OfA&s">
+  
+  <!-- ========================================
+       EXTERNAL RESOURCES
+       ======================================== -->
+  <!-- Preconnect to CDNs for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://unpkg.com">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="noopener">
+  
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- ========================================
+       CUSTOM CSS
+       ======================================== -->
+  <style>
+    /* ========================================
+       CSS CUSTOM PROPERTIES (VARIABLES)
+       ======================================== */
+    :root {
+      /* Primary Colors */
+      --primary-red: rgb(183, 50, 49);
+      --primary-red-hex: #B73231;
+      --secondary-pink: rgb(228, 194, 195);
+      --secondary-pink-hex: #E4C2C3;
+      
+      /* Supporting Colors */
+      --white: #FFFFFF;
+      --cream: #FAF9F6;
+      --warm-cream: #FFF8F0;
+      --charcoal: #2C2C2C;
+      --light-gray: #F5F5F5;
+      --medium-gray: #E0E0E0;
+      --dark-gray: #4A4A4A;
+      --success-green: #10B981;
+      --shadow-color: rgba(183, 50, 49, 0.15);
+      
+      /* Gradients */
+      --gradient-primary: linear-gradient(135deg, #B73231 0%, #E4C2C3 100%);
+      --gradient-secondary: linear-gradient(180deg, #FAF9F6 0%, #FFFFFF 100%);
+      --gradient-overlay: linear-gradient(180deg, rgba(183, 50, 49, 0.05) 0%, rgba(228, 194, 195, 0.05) 100%);
+      
+      /* Typography */
+      --font-heading: 'Poppins', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      
+      /* Font Sizes - Mobile */
+      --h1-size: 2rem;        /* 32px */
+      --h2-size: 1.5rem;      /* 24px */
+      --h3-size: 1.25rem;     /* 20px */
+      --body-size: 1rem;      /* 16px */
+      --small-size: 0.875rem; /* 14px */
+      
+      /* Font Weights */
+      --weight-light: 300;
+      --weight-regular: 400;
+      --weight-medium: 500;
+      --weight-semibold: 600;
+      --weight-bold: 700;
+      
+      /* Spacing System */
+      --spacing-xs: 0.5rem;   /* 8px */
+      --spacing-sm: 1rem;     /* 16px */
+      --spacing-md: 1.5rem;   /* 24px */
+      --spacing-lg: 2rem;     /* 32px */
+      --spacing-xl: 3rem;     /* 48px */
+      --spacing-2xl: 4rem;    /* 64px */
+      --spacing-3xl: 6rem;    /* 96px */
+      
+      /* Border Radius */
+      --radius-sm: 0.5rem;    /* 8px */
+      --radius-md: 1rem;      /* 16px */
+      --radius-lg: 1.5rem;    /* 24px */
+      --radius-full: 9999px;
+      
+      /* Shadows */
+      --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+      --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+      --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+      --shadow-glow: 0 0 20px rgba(183, 50, 49, 0.3);
+      --shadow-card: 0 8px 16px rgba(183, 50, 49, 0.12);
+    }
+    
+    /* Desktop Font Sizes */
+    @media (min-width: 768px) {
+      :root {
+        --h1-size: 3rem;         /* 48px */
+        --h2-size: 2rem;         /* 32px */
+        --h3-size: 1.5rem;       /* 24px */
+        --body-size: 1.125rem;   /* 18px */
+      }
+    }
+    
+    /* ========================================
+       BASE STYLES & RESETS
+       ======================================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      font-size: var(--body-size);
+      font-weight: var(--weight-regular);
+      line-height: 1.6;
+      color: var(--charcoal);
+      background: var(--gradient-secondary);
+      background-attachment: fixed;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+    
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+    
+    /* Focus styles for keyboard navigation */
+    *:focus {
+      outline: 3px solid var(--primary-red);
+      outline-offset: 2px;
+    }
+    
+    *:focus:not(:focus-visible) {
+      outline: none;
+    }
+    
+    /* Skip to main content link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary-red);
+      color: white;
+      padding: var(--spacing-xs) var(--spacing-sm);
+      text-decoration: none;
+      z-index: 100;
+      font-weight: var(--weight-semibold);
+    }
+    
+    .skip-link:focus {
+      top: 0;
+    }
+    
+    /* Screen reader only class */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+    
+    /* ========================================
+       TYPOGRAPHY
+       ======================================== */
+    h1, h2, h3 {
+      font-family: var(--font-heading);
+      font-weight: var(--weight-bold);
+      line-height: 1.2;
+      color: var(--primary-red);
+    }
+    
+    h1 {
+      font-size: var(--h1-size);
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    h2 {
+      font-size: var(--h2-size);
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    h3 {
+      font-size: var(--h3-size);
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    p {
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    /* ========================================
+       LAYOUT COMPONENTS
+       ======================================== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--spacing-lg) var(--spacing-md);
+      position: relative;
+    }
+    
+    @media (min-width: 768px) {
+      .container {
+        padding: var(--spacing-xl) var(--spacing-lg);
+      }
+    }
+    
+    /* ========================================
+       HERO SECTION
+       ======================================== */
+    .hero-section {
+      text-align: center;
+      padding: var(--spacing-xl) 0;
+      margin-bottom: var(--spacing-2xl);
+    }
+    
+    @media (min-width: 768px) {
+      .hero-section {
+        padding: var(--spacing-2xl) 0;
+        margin-bottom: var(--spacing-3xl);
+      }
+    }
+    
+    .church-logo {
+      max-width: 150px;
+      height: auto;
+      margin: 0 auto var(--spacing-lg);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    
+    @media (min-width: 768px) {
+      .church-logo {
+        max-width: 200px;
+      }
+    }
+    
+    .church-logo:hover {
+      transform: scale(1.05);
+    }
+    
+    .hero-section h1 {
+      color: var(--primary-red);
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .hero-section h2 {
+      color: var(--secondary-pink-hex);
+      font-weight: var(--weight-semibold);
+      font-size: var(--h2-size);
+    }
+    
+    @media (min-width: 768px) {
+      .hero-section h2 {
+        font-size: 2.5rem;
+      }
+    }
+    
+    /* ========================================
+       SERVICE TIMES SECTION
+       ======================================== */
+    .service-times {
+      margin-bottom: var(--spacing-2xl);
+    }
+    
+    @media (min-width: 768px) {
+      .service-times {
+        margin-bottom: var(--spacing-3xl);
+      }
+    }
+    
+    .service-times h2 {
+      text-align: center;
+      margin-bottom: var(--spacing-xl);
+      color: var(--charcoal);
+    }
+    
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--spacing-md);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    @media (min-width: 768px) {
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+      }
+    }
+    
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-lg);
+      box-shadow: var(--shadow-card);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--primary-red);
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .service-card h3 {
+      color: var(--charcoal);
+      margin-bottom: var(--spacing-xs);
+      font-size: var(--h3-size);
+    }
+    
+    .service-day {
+      color: var(--dark-gray);
+      font-weight: var(--weight-medium);
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .service-time {
+      color: var(--primary-red);
+      font-weight: var(--weight-semibold);
+      font-size: var(--body-size);
+    }
+    
+    /* ========================================
+       SOCIAL MEDIA LINKS SECTION
+       ======================================== */
+    .social-links {
+      margin-bottom: var(--spacing-2xl);
+    }
+    
+    @media (min-width: 768px) {
+      .social-links {
+        margin-bottom: var(--spacing-3xl);
+      }
+    }
+    
+    .social-links h2 {
+      text-align: center;
+      margin-bottom: var(--spacing-xl);
+      color: var(--charcoal);
+    }
+    
+    .social-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--spacing-md);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    @media (min-width: 768px) {
+      .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+      }
+    }
+    
+    .social-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-lg);
+      box-shadow: var(--shadow-card);
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 180px;
+      position: relative;
+      overflow: hidden;
+      will-change: transform;
+    }
+    
+    .social-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-primary);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    
+    .social-card:hover {
+      transform: scale(1.05) translateY(-5px);
+      box-shadow: 0 15px 30px var(--shadow-color);
+    }
+    
+    .social-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .social-card:active {
+      transform: scale(0.95);
+    }
+    
+    .social-icon {
+      font-size: 3rem;
+      margin-bottom: var(--spacing-md);
+      transition: transform 0.3s ease;
+    }
+    
+    .social-card:hover .social-icon {
+      transform: scale(1.1);
+    }
+    
+    .social-card.youtube {
+      border-top: 4px solid #FF0000;
+    }
+    
+    .social-card.youtube .social-icon {
+      color: #FF0000;
+    }
+    
+    .social-card.instagram {
+      border-top: 4px solid #E4405F;
+      background: linear-gradient(135deg, #fff 0%, #fff5f7 100%);
+    }
+    
+    .social-card.instagram .social-icon {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .social-card.tiktok {
+      border-top: 4px solid #000000;
+    }
+    
+    .social-card.tiktok .social-icon {
+      color: #000000;
+    }
+    
+    .social-card.x-twitter {
+      border-top: 4px solid #000000;
+    }
+    
+    .social-card.x-twitter .social-icon {
+      color: #000000;
+    }
+    
+    .social-text {
+      font-weight: var(--weight-semibold);
+      font-size: var(--body-size);
+      color: var(--charcoal);
+    }
+    
+    /* ========================================
+       SHARE BUTTON
+       ======================================== */
+    .share-button {
+      position: fixed;
+      bottom: var(--spacing-lg);
+      right: var(--spacing-lg);
+      width: 56px;
+      height: 56px;
+      background: var(--gradient-primary);
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-xl);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 1.5rem;
+      z-index: 50;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      will-change: transform;
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .share-button:hover {
+      transform: scale(1.1) rotate(15deg);
+      box-shadow: var(--shadow-glow);
+    }
+    
+    .share-button:active {
+      transform: scale(0.95);
+    }
+    
+    @media (max-width: 768px) {
+      .share-button {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+      }
+    }
+    
+    /* ========================================
+       TOAST NOTIFICATION
+       ======================================== */
+    .toast {
+      position: fixed;
+      bottom: calc(var(--spacing-lg) + 80px);
+      left: 50%;
+      transform: translateX(-50%) translateY(100%);
+      background: var(--charcoal);
+      color: var(--white);
+      padding: var(--spacing-md) var(--spacing-lg);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-xl);
+      z-index: 100;
+      font-weight: var(--weight-medium);
+      opacity: 0;
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      pointer-events: none;
+    }
+    
+    .toast.toast-visible {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+    
+    .toast.toast-error {
+      background: #DC2626;
+    }
+    
+    /* ========================================
+       ANIMATIONS & TRANSITIONS
+       ======================================== */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    
+    @keyframes fadeInFromTop {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeInFromBottom {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeInScale {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    @keyframes slideInToast {
+      from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+    
+    @keyframes logoSpin {
+      from {
+        transform: rotate(0deg) scale(1);
+      }
+      to {
+        transform: rotate(360deg) scale(1.1);
+      }
+    }
+    
+    .logo-spin {
+      animation: logoSpin 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    /* ========================================
+       RESPONSIVE BREAKPOINTS
+       ======================================== */
+    /* Extra Small Devices (Portrait Phones) */
+    @media (min-width: 320px) {
+      .container {
+        padding: var(--spacing-lg) var(--spacing-md);
+      }
+    }
+    
+    /* Small Devices (Landscape Phones) */
+    @media (min-width: 375px) {
+      .container {
+        padding: var(--spacing-lg) var(--spacing-md);
+      }
+    }
+    
+    /* Medium Devices (Tablets) */
+    @media (min-width: 768px) {
+      .hero-section {
+        padding: var(--spacing-2xl) 0;
+      }
+      
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    /* Large Devices (Desktops) */
+    @media (min-width: 1024px) {
+      .container {
+        max-width: 1200px;
+      }
+    }
+    
+    /* Extra Large Devices */
+    @media (min-width: 1440px) {
+      .container {
+        padding: var(--spacing-2xl) var(--spacing-xl);
+      }
+    }
+    
+    /* Ensure touch targets are at least 44x44px */
+    @media (hover: none) and (pointer: coarse) {
+      .social-card,
+      .share-button {
+        min-width: 44px;
+        min-height: 44px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip to main content link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <main id="main-content" class="container">
+    <!-- ========================================
+         HERO SECTION
+         ======================================== -->
+    <header class="hero-section" role="banner">
+      <img 
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSRyGNPyYO-ajtB-bAAcnb_DmLSYAMoC0OfA&s" 
+        alt="West End City Church Logo" 
+        class="church-logo"
+        id="church-logo"
+        role="img"
+        loading="eager"
+        onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'200\'%3E%3Crect fill=\'%23B73231\' width=\'200\' height=\'200\'/%3E%3Ctext fill=\'white\' font-size=\'20\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3EWECC%3C/text%3E%3C/svg%3E'; this.alt='Logo unavailable';"
+      >
+      <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-out">Connect With Us!</h1>
+      <h2 data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-out">West End City Church</h2>
+    </header>
+
+    <!-- ========================================
+         SERVICE TIMES SECTION
+         ======================================== -->
+    <section class="service-times" aria-label="Sunday service times" role="region">
+      <h2 data-aos="fade-up" data-aos-duration="800">Service Times</h2>
+      <div class="service-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <div class="service-icon">
+            <i class="fas fa-sun" aria-hidden="true"></i>
+          </div>
+          <h3>First Service</h3>
+          <div class="service-day">Sunday</div>
+          <div class="service-time">6:30 AM - 8:30 AM</div>
+        </div>
+        
+        <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+          <div class="service-icon">
+            <i class="fas fa-church" aria-hidden="true"></i>
+          </div>
+          <h3>Second Service</h3>
+          <div class="service-day">Sunday</div>
+          <div class="service-time">8:30 AM - 12:00 PM</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SOCIAL MEDIA LINKS SECTION
+         ======================================== -->
+    <section class="social-links" aria-label="Social media links" role="region">
+      <h2 data-aos="fade-up" data-aos-duration="800">Follow Us</h2>
+      <div class="social-grid">
+        <!-- YouTube -->
+        <a 
+          href="https://youtube.com/@westendcitychurch?si=nvDs4YIUmN5-CBBu" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="social-card youtube"
+          aria-label="Subscribe to West End City Church on YouTube"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-delay="400"
+          data-aos-easing="cubic-bezier(0.34, 1.56, 0.64, 1)"
+          onclick="trackClick('YouTube')"
+        >
+          <i class="fab fa-youtube social-icon" aria-hidden="true"></i>
+          <div class="social-text">Subscribe on YouTube</div>
+        </a>
+        
+        <!-- Instagram -->
+        <a 
+          href="https://www.instagram.com/westendcitychurch?igsh=ZjNpanRlNXp5bjIx" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="social-card instagram"
+          aria-label="Follow West End City Church on Instagram"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-delay="500"
+          data-aos-easing="cubic-bezier(0.34, 1.56, 0.64, 1)"
+          onclick="trackClick('Instagram')"
+        >
+          <i class="fab fa-instagram social-icon" aria-hidden="true"></i>
+          <div class="social-text">Follow on Instagram</div>
+        </a>
+        
+        <!-- TikTok -->
+        <a 
+          href="https://www.tiktok.com/@westendcitychurch?_t=ZM-90JtadDSqmu&_r=1" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="social-card tiktok"
+          aria-label="Watch West End City Church on TikTok"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-delay="600"
+          data-aos-easing="cubic-bezier(0.34, 1.56, 0.64, 1)"
+          onclick="trackClick('TikTok')"
+        >
+          <i class="fab fa-tiktok social-icon" aria-hidden="true"></i>
+          <div class="social-text">Watch on TikTok</div>
+        </a>
+        
+        <!-- X (Twitter) -->
+        <a 
+          href="https://x.com/westend_city" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="social-card x-twitter"
+          aria-label="Follow West End City Church on X (formerly Twitter)"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-delay="700"
+          data-aos-easing="cubic-bezier(0.34, 1.56, 0.64, 1)"
+          onclick="trackClick('X')"
+        >
+          <i class="fab fa-x-twitter social-icon" aria-hidden="true"></i>
+          <div class="social-text">Follow on X</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SHARE BUTTON & TOAST
+         ======================================== -->
+    <button 
+      class="share-button" 
+      aria-label="Share this page"
+      id="share-button"
+      onclick="handleShare()"
+    >
+      <i class="fas fa-share-alt" aria-hidden="true"></i>
+    </button>
+
+    <div 
+      class="toast" 
+      id="toast" 
+      role="alert" 
+      aria-live="polite"
+      aria-atomic="true"
+    >
+      Link copied to clipboard!
+    </div>
+  </main>
+
+  <!-- ========================================
+       SCRIPTS
+       ======================================== -->
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <script>
+    /* ========================================
+       INITIALIZATION
+       ======================================== */
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize AOS (Animate On Scroll)
+      AOS.init({
+        duration: 800,
+        easing: 'ease-out',
+        once: true,
+        offset: 100,
+        delay: 100
+      });
+      
+      // Check online status
+      if (!navigator.onLine) {
+        showToast('Please check your internet connection', 'error');
+      }
+    });
+    
+    // Listen for connectivity changes
+    window.addEventListener('online', () => {
+      showToast('Connection restored!', 'success');
+    });
+    
+    window.addEventListener('offline', () => {
+      showToast('You are offline', 'error');
+    });
+    
+    /* ========================================
+       SHARE FUNCTIONALITY
+       ======================================== */
+    async function handleShare() {
+      const shareData = {
+        title: 'West End City Church',
+        text: 'Connect with West End City Church on social media!',
+        url: window.location.href
+      };
+      
+      // Check if Web Share API is supported (mobile)
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+          trackShare('web-share-api');
+          // Show success feedback (native share dialog provides its own feedback)
+        } catch (error) {
+          // User cancelled or error occurred
+          if (error.name !== 'AbortError') {
+            console.error('Error sharing:', error);
+            // Fallback to clipboard copy on error
+            await copyToClipboard();
+          }
+        }
+      } else {
+        // Fallback to clipboard copy for desktop
+        await copyToClipboard();
+      }
+    }
+    
+    async function copyToClipboard() {
+      const url = window.location.href;
+      
+      try {
+        // Use modern Clipboard API
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(url);
+          showToast('Link copied to clipboard!', 'success');
+          trackShare('clipboard-api');
+        } else {
+          // Fallback for older browsers
+          fallbackCopyToClipboard(url);
+        }
+      } catch (error) {
+        console.error('Failed to copy to clipboard:', error);
+        // Fallback for browsers without clipboard API
+        fallbackCopyToClipboard(url);
+      }
+    }
+    
+    function fallbackCopyToClipboard(text) {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.select();
+      textArea.setSelectionRange(0, 99999); // For mobile devices
+      
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          showToast('Link copied to clipboard!', 'success');
+          trackShare('exec-command');
+        } else {
+          showToast('Failed to copy link', 'error');
+        }
+      } catch (error) {
+        console.error('Fallback copy failed:', error);
+        showToast('Failed to copy link', 'error');
+      } finally {
+        document.body.removeChild(textArea);
+      }
+    }
+    
+    /* ========================================
+       TOAST NOTIFICATION SYSTEM
+       ======================================== */
+    function showToast(message, type = 'success') {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.className = `toast toast-${type}`;
+      
+      // Force reflow to ensure the class change is applied
+      void toast.offsetWidth;
+      
+      // Add visible class after a brief delay
+      setTimeout(() => {
+        toast.classList.add('toast-visible');
+      }, 10);
+      
+      // Remove visible class after 3 seconds
+      setTimeout(() => {
+        toast.classList.remove('toast-visible');
+      }, 3000);
+    }
+    
+    /* ========================================
+       UTILITY FUNCTIONS
+       ======================================== */
+    // Track social media link clicks (for future analytics integration)
+    function trackClick(platform) {
+      console.log(`User clicked: ${platform}`);
+      // Future: Integrate with Google Analytics or similar
+      // gtag('event', 'click', { 'platform': platform });
+    }
+    
+    // Track share attempts (for future analytics integration)
+    function trackShare(method) {
+      console.log(`User shared via: ${method}`);
+      // Future: Integrate with Google Analytics or similar
+      // gtag('event', 'share', { 'method': method });
+    }
+    
+    /* ========================================
+       EVENT LISTENERS
+       ======================================== */
+    // Logo Easter Egg - Spin animation on click
+    const logo = document.getElementById('church-logo');
+    if (logo) {
+      logo.addEventListener('click', function() {
+        this.classList.add('logo-spin');
+        setTimeout(() => {
+          this.classList.remove('logo-spin');
+        }, 600);
+      });
+    }
+    
+    // Global error handler
+    window.addEventListener('error', (event) => {
+      console.error('Global error:', event.error);
+      // Optionally send to error tracking service
+    });
+    
+    // Handle unhandled promise rejections
+    window.addEventListener('unhandledrejection', (event) => {
+      console.error('Unhandled promise rejection:', event.reason);
+      // Optionally send to error tracking service
+    });
+  </script>
+</body>
+</html>
+
