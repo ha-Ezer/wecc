@@ -1271,7 +1271,7 @@
             >
             <label for="consent">
               I consent to West End City Church storing my information to stay connected.
-              <a href="#" class="privacy-link" id="privacyLink">Privacy Policy</a>
+              <a href="javascript:void(0);" class="privacy-link" id="privacyLink" onclick="return false;">Privacy Policy</a>
             </label>
           </div>
           
@@ -1961,47 +1961,71 @@
        PRIVACY MODAL HANDLERS
        ======================================== */
     
-    const privacyLink = document.getElementById('privacyLink');
-    const privacyModal = document.getElementById('privacyModal');
-    const modalClose = document.querySelector('.modal-close');
-    const modalBtn = document.querySelector('.modal-btn');
-    
-    if (privacyLink && privacyModal) {
-      privacyLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        privacyModal.classList.add('show');
-      });
-    }
-    
-    if (modalClose) {
-      modalClose.addEventListener('click', closePrivacyModal);
-    }
-    
-    if (modalBtn) {
-      modalBtn.addEventListener('click', closePrivacyModal);
-    }
-    
-    function closePrivacyModal() {
-      if (privacyModal) {
-        privacyModal.classList.remove('show');
+    // Initialize privacy modal handlers after DOM is ready
+    function initPrivacyModal() {
+      const privacyLink = document.getElementById('privacyLink');
+      const privacyModal = document.getElementById('privacyModal');
+      const modalClose = document.querySelector('.modal-close');
+      const modalBtn = document.querySelector('.modal-btn');
+      
+      function closePrivacyModal() {
+        if (privacyModal) {
+          privacyModal.classList.remove('show');
+        }
       }
-    }
-    
-    // Close modal on backdrop click
-    if (privacyModal) {
-      privacyModal.addEventListener('click', function(e) {
-        if (e.target === privacyModal) {
+      
+      // Make closePrivacyModal available globally for onclick handler
+      window.closePrivacyModal = closePrivacyModal;
+      
+      if (privacyLink && privacyModal) {
+        privacyLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          privacyModal.classList.add('show');
+          return false;
+        });
+      }
+      
+      if (modalClose) {
+        modalClose.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          closePrivacyModal();
+        });
+      }
+      
+      if (modalBtn) {
+        modalBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          closePrivacyModal();
+        });
+      }
+      
+      // Close modal on backdrop click
+      if (privacyModal) {
+        privacyModal.addEventListener('click', function(e) {
+          if (e.target === privacyModal) {
+            closePrivacyModal();
+          }
+        });
+      }
+      
+      // Close modal on ESC key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && privacyModal && privacyModal.classList.contains('show')) {
           closePrivacyModal();
         }
       });
     }
     
-    // Close modal on ESC key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && privacyModal && privacyModal.classList.contains('show')) {
-        closePrivacyModal();
-      }
-    });
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPrivacyModal);
+    } else {
+      // DOM is already ready
+      initPrivacyModal();
+    }
   </script>
   
   <!-- Privacy Modal -->
