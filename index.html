@@ -19,7 +19,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="West End City Church - Connect With Us">
   <meta property="og:description" content="Connect with West End City Church on social media. Join us for Sunday services!">
-  <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSRyGNPyYO-ajtB-bAAcnb_DmLSYAMoC0OfA&s">
+  <meta property="og:image" content="WeccLogo.png">
   <meta property="og:url" content="https://[YOUR-GITHUB-USERNAME].github.io/[REPO-NAME]/">
   <meta property="og:site_name" content="West End City Church">
   
@@ -27,13 +27,13 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="West End City Church - Connect With Us">
   <meta name="twitter:description" content="Connect with West End City Church on social media. Join us for Sunday services!">
-  <meta name="twitter:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSRyGNPyYO-ajtB-bAAcnb_DmLSYAMoC0OfA&s">
+  <meta name="twitter:image" content="WeccLogo.png">
   <meta name="twitter:site" content="@westend_city">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSRyGNPyYO-ajtB-bAAcnb_DmLSYAMoC0OfA&s">
-  <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSRyGNPyYO-ajtB-bAAcnb_DmLSYAMoC0OfA&s">
-  <link rel="apple-touch-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSRyGNPyYO-ajtB-bAAcnb_DmLSYAMoC0OfA&s">
+  <link rel="icon" type="image/png" href="WeccLogo.png">
+  <link rel="shortcut icon" href="WeccLogo.png">
+  <link rel="apple-touch-icon" href="WeccLogo.png">
   
   <!-- ========================================
        EXTERNAL RESOURCES
@@ -570,27 +570,404 @@
     .toast {
       position: fixed;
       bottom: calc(var(--spacing-lg) + 80px);
-      left: 50%;
-      transform: translateX(-50%) translateY(100%);
-      background: var(--charcoal);
-      color: var(--white);
+      right: var(--spacing-lg);
+      transform: translateY(100px);
+      background: white;
+      color: var(--charcoal);
       padding: var(--spacing-md) var(--spacing-lg);
       border-radius: var(--radius-md);
       box-shadow: var(--shadow-xl);
-      z-index: 100;
+      z-index: 1000;
       font-weight: var(--weight-medium);
+      font-family: var(--font-body);
+      font-size: var(--body-size);
       opacity: 0;
-      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: all 0.3s ease;
       pointer-events: none;
+      max-width: 400px;
+      border-left: 4px solid var(--charcoal);
     }
     
     .toast.toast-visible {
       opacity: 1;
-      transform: translateX(-50%) translateY(0);
+      transform: translateY(0);
     }
     
     .toast.toast-error {
-      background: #DC2626;
+      background: white;
+      border-left-color: #EF4444;
+      color: #991B1B;
+    }
+    
+    .toast-success {
+      background: white;
+      border-left: 4px solid #10B981;
+      color: #065F46;
+    }
+    
+    .toast-warning {
+      background: white;
+      border-left: 4px solid #F59E0B;
+      color: #92400E;
+    }
+    
+    /* Update toast positioning for better visibility */
+    @media (max-width: 768px) {
+      .toast {
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+        transform: translateY(100px);
+      }
+      
+      .toast.toast-visible {
+        transform: translateY(0);
+      }
+    }
+    
+    /* ========================================
+       CONTACT FORM SECTION
+       ======================================== */
+    .contact-form-section {
+      max-width: 600px;
+      margin: var(--spacing-xl) auto;
+      padding: 0 var(--spacing-md);
+    }
+    
+    @media (min-width: 768px) {
+      .contact-form-section {
+        padding: 0 var(--spacing-lg);
+      }
+    }
+    
+    .form-container {
+      background: linear-gradient(135deg, rgba(183, 50, 49, 0.05) 0%, rgba(228, 194, 195, 0.05) 100%);
+      border: 2px solid var(--secondary-pink);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-xl);
+      box-shadow: var(--shadow-card);
+    }
+    
+    @media (max-width: 768px) {
+      .form-container {
+        padding: var(--spacing-lg);
+      }
+    }
+    
+    .form-title {
+      font-family: var(--font-heading);
+      font-size: var(--h2-size);
+      font-weight: var(--weight-bold);
+      color: var(--primary-red);
+      text-align: center;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    @media (max-width: 768px) {
+      .form-title {
+        font-size: 1.75rem;
+      }
+    }
+    
+    .form-subtitle {
+      font-family: var(--font-body);
+      font-size: var(--body-size);
+      color: var(--dark-gray);
+      text-align: center;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    @media (max-width: 768px) {
+      .form-subtitle {
+        font-size: 0.9rem;
+      }
+    }
+    
+    .form-group {
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .form-group label {
+      display: block;
+      font-family: var(--font-body);
+      font-size: var(--small-size);
+      font-weight: var(--weight-semibold);
+      color: var(--charcoal);
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .input-icon-wrapper {
+      position: relative;
+      width: 100%;
+    }
+    
+    .input-icon {
+      position: absolute;
+      left: var(--spacing-sm);
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--primary-red);
+      font-size: 1rem;
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) calc(var(--spacing-sm) + 1.5rem + var(--spacing-xs));
+      font-family: var(--font-body);
+      font-size: var(--body-size);
+      border: 2px solid var(--medium-gray);
+      border-radius: var(--radius-sm);
+      transition: all 0.3s ease;
+      background: white;
+      min-height: 44px; /* Touch-friendly */
+    }
+    
+    .form-group:focus-within .input-icon {
+      color: var(--primary-red);
+      transform: translateY(-50%) scale(1.1);
+    }
+    
+    .input-icon-wrapper:hover .input-icon {
+      color: var(--primary-red);
+    }
+    
+    @media (max-width: 768px) {
+      .form-group input {
+        font-size: 16px; /* Prevents zoom on iOS */
+      }
+    }
+    
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--primary-red);
+      box-shadow: 0 0 0 3px rgba(183, 50, 49, 0.1);
+    }
+    
+    .form-group input::placeholder {
+      color: var(--medium-gray);
+    }
+    
+    .input-error {
+      border-color: #EF4444 !important;
+    }
+    
+    .input-error:focus {
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+    }
+    
+    .field-error {
+      color: #EF4444;
+      font-size: var(--small-size);
+      margin-top: var(--spacing-xs);
+      font-weight: var(--weight-medium);
+      display: none;
+    }
+    
+    .field-error:not(:empty) {
+      display: block;
+    }
+    
+    .form-group-checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--spacing-xs);
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .form-group-checkbox input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      margin-top: 2px;
+      cursor: pointer;
+      accent-color: var(--primary-red);
+      flex-shrink: 0;
+    }
+    
+    .form-group-checkbox label {
+      font-size: var(--small-size);
+      color: var(--dark-gray);
+      line-height: 1.5;
+      cursor: pointer;
+      font-weight: var(--weight-regular);
+    }
+    
+    .privacy-link {
+      color: var(--primary-red);
+      text-decoration: underline;
+    }
+    
+    .privacy-link:hover {
+      text-decoration: none;
+    }
+    
+    .submit-btn {
+      width: 100%;
+      padding: var(--spacing-md);
+      font-family: var(--font-heading);
+      font-size: var(--body-size);
+      font-weight: var(--weight-semibold);
+      color: white;
+      background: linear-gradient(135deg, var(--primary-red) 0%, #8B2827 100%);
+      border: none;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-md);
+      min-height: 48px; /* Touch-friendly */
+    }
+    
+    .submit-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .submit-btn:active:not(:disabled) {
+      transform: translateY(0);
+    }
+    
+    .submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    
+    .btn-loader {
+      display: none;
+      align-items: center;
+      gap: var(--spacing-xs);
+    }
+    
+    .btn-loader.show {
+      display: inline-flex;
+    }
+    
+    .btn-text.hide {
+      display: none;
+    }
+    
+    .btn-loader i {
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    /* Facebook Social Card */
+    .social-card.facebook {
+      border-top: 4px solid #1877F2;
+    }
+    
+    .social-card.facebook .social-icon {
+      color: #1877F2;
+    }
+    
+    /* ========================================
+       PRIVACY MODAL
+       ======================================== */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      padding: var(--spacing-md);
+    }
+    
+    .modal.show {
+      display: flex;
+    }
+    
+    .modal-content {
+      background: white;
+      padding: var(--spacing-xl);
+      border-radius: var(--radius-lg);
+      max-width: 600px;
+      max-height: 80vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: var(--shadow-xl);
+    }
+    
+    @media (max-width: 768px) {
+      .modal-content {
+        padding: var(--spacing-lg);
+        max-width: 100%;
+      }
+    }
+    
+    .modal-close {
+      position: absolute;
+      top: var(--spacing-md);
+      right: var(--spacing-md);
+      font-size: 2rem;
+      color: var(--dark-gray);
+      cursor: pointer;
+      line-height: 1;
+      background: none;
+      border: none;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-sm);
+      transition: all 0.3s ease;
+    }
+    
+    .modal-close:hover {
+      color: var(--primary-red);
+      background: var(--light-gray);
+    }
+    
+    .modal-content h2 {
+      font-family: var(--font-heading);
+      font-size: var(--h2-size);
+      color: var(--primary-red);
+      margin-bottom: var(--spacing-md);
+      padding-right: var(--spacing-xl);
+    }
+    
+    .modal-content p {
+      font-family: var(--font-body);
+      font-size: var(--body-size);
+      color: var(--charcoal);
+      line-height: 1.6;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .modal-content a {
+      color: var(--primary-red);
+      text-decoration: underline;
+    }
+    
+    .modal-btn {
+      margin-top: var(--spacing-lg);
+      padding: var(--spacing-sm) var(--spacing-lg);
+      background: var(--primary-red);
+      color: white;
+      border: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-weight: var(--weight-semibold);
+      font-size: var(--body-size);
+      transition: all 0.3s ease;
+    }
+    
+    .modal-btn:hover {
+      background: #8B2827;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
     }
     
     /* ========================================
@@ -728,7 +1105,7 @@
          ======================================== -->
     <header class="hero-section" role="banner">
       <img 
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSRyGNPyYO-ajtB-bAAcnb_DmLSYAMoC0OfA&s" 
+        src="WeccLogo.png" 
         alt="West End City Church Logo" 
         class="church-logo"
         id="church-logo"
@@ -763,6 +1140,137 @@
           <div class="service-day">Sunday</div>
           <div class="service-time">8:30 AM - 12:00 PM</div>
         </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         CONTACT FORM SECTION
+         ======================================== -->
+    <section class="contact-form-section" aria-label="Contact information form" role="region" data-aos="fade-up" data-aos-duration="800">
+      <div class="form-container">
+        <h2 class="form-title">Stay Connected</h2>
+        <p class="form-subtitle">Let us know you visited! We'd love to connect with you.</p>
+        
+        <form id="contactForm" class="contact-form" novalidate aria-label="Contact information form">
+          <!-- Name Field -->
+          <div class="form-group">
+            <label for="name">
+              Your Name <span aria-label="required">*</span>
+            </label>
+            <div class="input-icon-wrapper">
+              <i class="fas fa-user input-icon" aria-hidden="true"></i>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                placeholder="Enter your full name"
+                aria-required="true"
+                aria-invalid="false"
+                aria-describedby="name-error"
+                required
+              >
+            </div>
+            <div id="name-error" role="alert" aria-live="polite" class="field-error"></div>
+          </div>
+          
+          <!-- Phone Number Field -->
+          <div class="form-group">
+            <label for="phone">
+              Phone Number <span aria-label="required">*</span>
+            </label>
+            <div class="input-icon-wrapper">
+              <i class="fas fa-phone input-icon" aria-hidden="true"></i>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                placeholder="e.g., +233 24 123 4567"
+                aria-required="true"
+                aria-invalid="false"
+                aria-describedby="phone-error"
+                required
+              >
+            </div>
+            <div id="phone-error" role="alert" aria-live="polite" class="field-error"></div>
+          </div>
+          
+          <!-- Location Field with Autocomplete -->
+          <div class="form-group">
+            <label for="location">
+              Where do you stay? <span aria-label="required">*</span>
+            </label>
+            <div class="input-icon-wrapper">
+              <i class="fas fa-map-marker-alt input-icon" aria-hidden="true"></i>
+              <input 
+                type="text" 
+                id="location" 
+                name="location" 
+                list="locationSuggestions"
+                placeholder="Enter your location"
+                aria-required="true"
+                aria-invalid="false"
+                aria-describedby="location-error"
+                required
+              >
+            </div>
+            <datalist id="locationSuggestions">
+              <!-- Ghana Common Locations -->
+              <option value="Accra">
+              <option value="Tema">
+              <option value="Kumasi">
+              <option value="Takoradi">
+              <option value="Cape Coast">
+              <option value="Tamale">
+              <option value="Koforidua">
+              <option value="Sunyani">
+              <option value="Ho">
+              <option value="Techiman">
+              <option value="Obuasi">
+              <option value="Wa">
+              <option value="Bolgatanga">
+              <!-- Accra Neighborhoods -->
+              <option value="East Legon">
+              <option value="Madina">
+              <option value="Lapaz">
+              <option value="Kaneshie">
+              <option value="Achimota">
+              <option value="Dansoman">
+              <option value="Teshie">
+              <option value="Nungua">
+              <option value="Spintex">
+              <option value="Adenta">
+              <option value="Dome">
+              <option value="Kasoa">
+              <option value="Weija">
+              <option value="Haatso">
+              <option value="Ashongman">
+            </datalist>
+            <div id="location-error" role="alert" aria-live="polite" class="field-error"></div>
+          </div>
+          
+          <!-- Privacy Consent -->
+          <div class="form-group-checkbox">
+            <input 
+              type="checkbox" 
+              id="consent" 
+              name="consent" 
+              required
+              aria-required="true"
+            >
+            <label for="consent">
+              I consent to West End City Church storing my information to stay connected.
+              <a href="#" class="privacy-link" id="privacyLink">Privacy Policy</a>
+            </label>
+          </div>
+          
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn" id="submitBtn">
+            <span class="btn-text">Submit</span>
+            <span class="btn-loader">
+              <i class="fas fa-circle-notch fa-spin"></i> Submitting...
+            </span>
+          </button>
+        </form>
       </div>
     </section>
 
@@ -838,6 +1346,23 @@
         >
           <i class="fab fa-x-twitter social-icon" aria-hidden="true"></i>
           <div class="social-text">Follow on X</div>
+        </a>
+        
+        <!-- Facebook -->
+        <a 
+          href="https://www.facebook.com/BishopELNterful" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="social-card facebook"
+          aria-label="Follow West End City Church on Facebook"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-delay="800"
+          data-aos-easing="cubic-bezier(0.34, 1.56, 0.64, 1)"
+          onclick="trackClick('Facebook')"
+        >
+          <i class="fab fa-facebook-f social-icon" aria-hidden="true"></i>
+          <div class="social-text">Facebook - West End City Church</div>
         </a>
       </div>
     </section>
@@ -1040,7 +1565,451 @@
       console.error('Unhandled promise rejection:', event.reason);
       // Optionally send to error tracking service
     });
+    
+    /* ========================================
+       CONTACT FORM CONFIGURATION & HANDLING
+       ======================================== */
+    
+    // Google Apps Script Web App URL
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxU1uNlIqMPxSQ4DXDGrYTO98PoIurV8NxsLh5Cawmj291tc3IErDIioFZP_proQCP4/exec';
+    
+    // Form submission configuration
+    const SUBMISSION_CONFIG = {
+      maxRetries: 3,
+      retryDelay: 5000, // 5 seconds
+      buttonDisableTime: 3000 // 3 seconds
+    };
+    
+    // Get form elements
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    // Form submission with retry logic
+    if (contactForm && submitBtn) {
+      contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Validate all fields first
+        const nameValid = validateName(document.getElementById('name'));
+        const phoneValid = validatePhone(document.getElementById('phone'));
+        const locationValid = validateLocation(document.getElementById('location'));
+        const consentChecked = document.getElementById('consent').checked;
+        
+        if (!nameValid || !phoneValid || !locationValid || !consentChecked) {
+          showToast('Please fill in all required fields and accept the privacy policy.', 'error');
+          return;
+        }
+        
+        // Disable button and show loader
+        disableSubmitButton();
+        
+        // Get form data
+        const formData = {
+          name: document.getElementById('name').value.trim(),
+          phone: document.getElementById('phone').value.trim(),
+          location: document.getElementById('location').value.trim()
+        };
+        
+        // Attempt submission with retries
+        let attempt = 0;
+        let success = false;
+        
+        while (attempt < SUBMISSION_CONFIG.maxRetries && !success) {
+          attempt++;
+          
+          try {
+            const response = await submitToGoogleSheet(formData);
+            
+            if (response.status === 'success') {
+              success = true;
+              handleSubmissionSuccess(response);
+            } else {
+              throw new Error(response.message || 'Submission failed');
+            }
+            
+          } catch (error) {
+            console.error(`Attempt ${attempt} failed:`, error);
+            
+            if (attempt < SUBMISSION_CONFIG.maxRetries) {
+              // Show retry message
+              showToast(`Connection issue. Retrying... (${attempt}/${SUBMISSION_CONFIG.maxRetries})`, 'warning');
+              
+              // Wait before retry
+              await sleep(SUBMISSION_CONFIG.retryDelay);
+            } else {
+              // Final attempt failed
+              handleSubmissionError(error);
+            }
+          }
+        }
+      });
+    }
+    
+    // Submit data to Google Sheet using fetch API (allows reading response for toast)
+    async function submitToGoogleSheet(data) {
+      // Convert data to URL-encoded format (form data)
+      const formData = new URLSearchParams();
+      formData.append('name', data.name);
+      formData.append('phone', data.phone);
+      formData.append('location', data.location);
+      
+      try {
+        const response = await fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'cors', // Try CORS first
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: formData.toString(),
+          redirect: 'follow'
+        });
+        
+        // Try to parse JSON response
+        const text = await response.text();
+        let result;
+        
+        try {
+          result = JSON.parse(text);
+        } catch (parseError) {
+          // If response is not JSON, it might be HTML or plain text
+          // Check if the request was successful
+          if (response.ok || text.toLowerCase().includes('success')) {
+            result = { 
+              status: 'success', 
+              message: 'Thank you! Your information has been recorded.' 
+            };
+          } else {
+            throw new Error('Unable to process response');
+          }
+        }
+        
+        return result;
+      } catch (error) {
+        // If CORS fails, fall back to form submission (but try to show toast)
+        console.warn('Fetch failed, this might be a CORS issue:', error);
+        
+        // Try XMLHttpRequest as fallback
+        return new Promise((resolve, reject) => {
+          const xhr = new XMLHttpRequest();
+          xhr.open('POST', GOOGLE_SCRIPT_URL, true);
+          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+          
+          xhr.onload = function() {
+            if (xhr.status >= 200 && xhr.status < 300) {
+              try {
+                const result = JSON.parse(xhr.responseText);
+                resolve(result);
+              } catch (e) {
+                // If not JSON, assume success
+                resolve({ status: 'success', message: 'Your information has been recorded.' });
+              }
+            } else {
+              reject(new Error('Submission failed'));
+            }
+          };
+          
+          xhr.onerror = function() {
+            reject(new Error('Network error'));
+          };
+          
+          xhr.send(formData.toString());
+        });
+      }
+    }
+    
+    // Alternative: Using fetch with no-cors (limited response reading)
+    async function submitToGoogleSheetFetch(data) {
+      try {
+        const response = await fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors', // Important for Apps Script CORS limitations
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+        
+        // With no-cors mode, we can't read the response
+        // Assume success if no error is thrown
+        return { status: 'success', message: 'Submitted successfully' };
+      } catch (error) {
+        throw error;
+      }
+    }
+    
+    // Handle successful submission
+    function handleSubmissionSuccess(response) {
+      // Show success message
+      showToast('Thank you! Your information has been saved successfully. 🎉', 'success');
+      
+      // Clear form
+      contactForm.reset();
+      
+      // Clear any validation errors
+      clearFieldError(document.getElementById('name'));
+      clearFieldError(document.getElementById('phone'));
+      clearFieldError(document.getElementById('location'));
+      
+      // Re-enable button after delay
+      setTimeout(() => {
+        enableSubmitButton();
+      }, SUBMISSION_CONFIG.buttonDisableTime);
+      
+      // Optional: Track successful submission
+      console.log('Form submitted successfully:', response);
+    }
+    
+    // Handle submission error
+    function handleSubmissionError(error) {
+      // Show error message (don't clear form)
+      showToast('Unable to save your information. Please try again or contact us directly.', 'error');
+      
+      // Re-enable button
+      enableSubmitButton();
+      
+      // Log error
+      console.error('Form submission failed after all retries:', error);
+    }
+    
+    // Disable submit button
+    function disableSubmitButton() {
+      if (!submitBtn) return;
+      submitBtn.disabled = true;
+      const btnText = submitBtn.querySelector('.btn-text');
+      const btnLoader = submitBtn.querySelector('.btn-loader');
+      if (btnText) btnText.classList.add('hide');
+      if (btnLoader) btnLoader.classList.add('show');
+    }
+    
+    // Enable submit button
+    function enableSubmitButton() {
+      if (!submitBtn) return;
+      submitBtn.disabled = false;
+      const btnText = submitBtn.querySelector('.btn-text');
+      const btnLoader = submitBtn.querySelector('.btn-loader');
+      if (btnText) btnText.classList.remove('hide');
+      if (btnLoader) btnLoader.classList.remove('show');
+    }
+    
+    // Sleep utility
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    
+    /* ========================================
+       FORM VALIDATION
+       ======================================== */
+    
+    // Add validation listeners
+    const nameInput = document.getElementById('name');
+    const phoneInput = document.getElementById('phone');
+    const locationInput = document.getElementById('location');
+    
+    if (nameInput) {
+      nameInput.addEventListener('blur', function() {
+        validateName(this);
+      });
+    }
+    
+    if (phoneInput) {
+      phoneInput.addEventListener('blur', function() {
+        validatePhone(this);
+      });
+    }
+    
+    if (locationInput) {
+      locationInput.addEventListener('blur', function() {
+        validateLocation(this);
+      });
+    }
+    
+    // Validation functions
+    function validateName(input) {
+      const value = input.value.trim();
+      
+      if (value.length < 2) {
+        showFieldError(input, 'Please enter a valid name (at least 2 characters)');
+        return false;
+      }
+      
+      clearFieldError(input);
+      return true;
+    }
+    
+    function validatePhone(input) {
+      const value = input.value.trim();
+      
+      // Remove common phone formatting characters for validation
+      const cleanPhone = value.replace(/[\s\-\(\)\+]/g, '');
+      
+      if (cleanPhone.length < 10) {
+        showFieldError(input, 'Please enter a valid phone number (at least 10 digits)');
+        return false;
+      }
+      
+      clearFieldError(input);
+      return true;
+    }
+    
+    function validateLocation(input) {
+      const value = input.value.trim();
+      
+      if (value.length < 2) {
+        showFieldError(input, 'Please enter your location');
+        return false;
+      }
+      
+      clearFieldError(input);
+      return true;
+    }
+    
+    // Show field error
+    function showFieldError(input, message) {
+      const formGroup = input.closest('.form-group');
+      if (!formGroup) return;
+      
+      // Remove existing error
+      const existingError = formGroup.querySelector('.field-error');
+      if (existingError) {
+        existingError.textContent = message;
+        existingError.style.display = 'block';
+      } else {
+        // Find error container
+        const errorId = input.getAttribute('aria-describedby');
+        if (errorId) {
+          const errorDiv = document.getElementById(errorId);
+          if (errorDiv) {
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+          }
+        }
+      }
+      
+      // Add error styling to input
+      input.classList.add('input-error');
+      input.setAttribute('aria-invalid', 'true');
+    }
+    
+    // Clear field error
+    function clearFieldError(input) {
+      const formGroup = input.closest('.form-group');
+      if (!formGroup) return;
+      
+      const errorId = input.getAttribute('aria-describedby');
+      if (errorId) {
+        const errorDiv = document.getElementById(errorId);
+        if (errorDiv) {
+          errorDiv.textContent = '';
+          errorDiv.style.display = 'none';
+        }
+      }
+      
+      input.classList.remove('input-error');
+      input.setAttribute('aria-invalid', 'false');
+    }
+    
+    /* ========================================
+       ENHANCED TOAST NOTIFICATION
+       ======================================== */
+    
+    // Enhanced showToast function
+    function showToast(message, type = 'success') {
+      const toast = document.getElementById('toast');
+      if (!toast) return;
+      
+      // Set message
+      toast.textContent = message;
+      
+      // Remove all type classes
+      toast.classList.remove('toast-success', 'toast-error', 'toast-warning');
+      
+      // Set type class
+      toast.className = `toast toast-${type}`;
+      
+      // Remove visible class first
+      toast.classList.remove('toast-visible');
+      
+      // Force reflow
+      void toast.offsetWidth;
+      
+      // Add visible class after a brief delay
+      setTimeout(() => {
+        toast.classList.add('toast-visible');
+      }, 10);
+      
+      // Auto-hide after duration
+      const duration = type === 'error' ? 5000 : 3000;
+      
+      setTimeout(() => {
+        toast.classList.remove('toast-visible');
+      }, duration);
+    }
+    
+    /* ========================================
+       PRIVACY MODAL HANDLERS
+       ======================================== */
+    
+    const privacyLink = document.getElementById('privacyLink');
+    const privacyModal = document.getElementById('privacyModal');
+    const modalClose = document.querySelector('.modal-close');
+    const modalBtn = document.querySelector('.modal-btn');
+    
+    if (privacyLink && privacyModal) {
+      privacyLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        privacyModal.classList.add('show');
+      });
+    }
+    
+    if (modalClose) {
+      modalClose.addEventListener('click', closePrivacyModal);
+    }
+    
+    if (modalBtn) {
+      modalBtn.addEventListener('click', closePrivacyModal);
+    }
+    
+    function closePrivacyModal() {
+      if (privacyModal) {
+        privacyModal.classList.remove('show');
+      }
+    }
+    
+    // Close modal on backdrop click
+    if (privacyModal) {
+      privacyModal.addEventListener('click', function(e) {
+        if (e.target === privacyModal) {
+          closePrivacyModal();
+        }
+      });
+    }
+    
+    // Close modal on ESC key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && privacyModal && privacyModal.classList.contains('show')) {
+        closePrivacyModal();
+      }
+    });
   </script>
+  
+  <!-- Privacy Modal -->
+  <div id="privacyModal" class="modal" role="dialog" aria-labelledby="privacyModalTitle" aria-modal="true">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close privacy policy">&times;</button>
+      <h2 id="privacyModalTitle">Privacy Policy</h2>
+      <p>
+        West End City Church values your privacy. The information you provide 
+        (name, phone number, location) will be used solely to connect with you 
+        about our church services and events.
+      </p>
+      <p>
+        We will not share your information with third parties. You may request 
+        deletion of your data at any time by contacting us at 
+        <a href="mailto:ntimeben@gmail.com">ntimeben@gmail.com</a>.
+      </p>
+      <button class="modal-btn" onclick="closePrivacyModal()">I Understand</button>
+    </div>
+  </div>
 </body>
 </html>
 
